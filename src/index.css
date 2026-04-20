@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Noto Sans KR', sans-serif;
+  }
+
+  body {
+    @apply bg-white text-black;
+    overscroll-behavior: none;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply text-[11px] font-semibold tracking-widest text-black/40 uppercase mb-2;
+  }
+}
+
+/* iOS safe area */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
